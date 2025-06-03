@@ -90,8 +90,8 @@ def main():
         #spiegel.download_invoices(driver)
         #github.download_invoices(driver)
         #zoom.download_invoices(driver)
-        #df.download_invoices(driver)
-        awin.download_invoices(driver)
+        df.download_invoices(driver)
+        #awin.download_invoices(driver)
 
     finally:
         print("🔚 Schließe Browser...")

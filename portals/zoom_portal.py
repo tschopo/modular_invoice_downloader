@@ -15,6 +15,8 @@ except:
 
 class ZoomPortal(InvoicePortal):
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
+
+        print("\n\n🚀 Zoom Portal")
         print("🌐 Öffne Zoom Loginseite...")
         driver.get("https://www.zoom.us/signin#/login")
         time.sleep(5)

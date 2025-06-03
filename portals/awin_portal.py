@@ -18,6 +18,9 @@ class AwinPortal(InvoicePortal):
         return datetime(year, month, day)
 
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
+
+        print("\n\n🚀 Awin Portal")
+
         print("🌐 Öffne Awin Loginseite...")
         driver.get("https://ui.awin.com/idp/us/awin/login/prelogin?redirect=%2Flogin%3FnetworkGroup%3Dawin")
         time.sleep(3)

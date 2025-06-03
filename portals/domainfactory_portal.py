@@ -8,6 +8,9 @@ from datetime import datetime
 
 class DomainFactoryPortal(InvoicePortal):
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
+
+        print("\n\n🚀 Domainfactory Portal")
+
         print("🌐 Öffne DomainFactory Rechnungsseite...")
         driver.get("https://sso.df.eu/?app=cp&path=%2Fkunde%2Findex.php%3Fmodule%3Drechnungen&realm=idp")
         time.sleep(3)
@@ -16,7 +19,9 @@ class DomainFactoryPortal(InvoicePortal):
         if "sso.df.eu" in driver.current_url:
             print("🔐 Login erforderlich...")
             driver.find_element(By.ID, "1").send_keys(self.username)
+            time.sleep(1)
             driver.find_element(By.ID, "2").send_keys(self.password)
+            time.sleep(1.5)
             driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
             time.sleep(5)
             print("🔓 Login gesendet")

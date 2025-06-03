@@ -9,6 +9,8 @@ from base import InvoicePortal
 class DHLPortal(InvoicePortal):
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
 
+        print("\n\n🚀 DHL Portal")
+
         try:
             LOGIN_URL = "https://sso.geschaeftskunden.dhl.de/auth/realms/GkpExternal/protocol/openid-connect/auth?client_id=gui&redirect_uri=https%3A%2F%2Fgeschaeftskunden.dhl.de%2Fbilling%2Finvoice%2Foverview&state=1f653d81-1476-477d-9ff2-f6ab4a9bc6c5&response_mode=fragment&response_type=code&scope=openid&nonce=f6fab592-b151-42f8-9a92-cfa93e573fc7&ui_locales=de-DE&code_challenge=0SPP9JWSDRLdj0PSVuURa94IslWfTQGywTpR09AfNgA&code_challenge_method=S256"
             driver.get(LOGIN_URL)

@@ -10,6 +10,7 @@ from base import InvoicePortal
 
 class GithubPortal(InvoicePortal):
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
+        print("\n\n🚀 GitHub Portal")
         print("🌐 Öffne GitHub Loginseite...")
         driver.get("https://github.com/login")
         time.sleep(3)

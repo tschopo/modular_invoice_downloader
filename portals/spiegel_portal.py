@@ -58,6 +58,7 @@ class SpiegelPortal(InvoicePortal):
             time.sleep(7)
 
     def download_invoices(self, driver: WebDriver) -> Optional[int]:
+        print("\n\n🚀 Spiegel Portal")
 
         # Login
         self.login(driver)
